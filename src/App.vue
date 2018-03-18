@@ -1,24 +1,27 @@
 <template>
-  <div id="app">
-    <header>
-      <span>Vue.js PWA</span>
-    </header>
-    <main>
-      <img src="./assets/logo.png" alt="Vue.js PWA">
-      <router-view></router-view>
-    </main>
+  <div id="app" class="container">
+    <Nav></Nav>
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
+import Nav from '@/components/Nav'
+
+require('bootstrap/dist/css/bootstrap.css')
+
 export default {
-  name: 'app'
+  name: 'app',
+  components: {
+    Nav
+  }
 }
 </script>
 
 <style>
 body {
   margin: 0;
+  padding-top: 100px;
 }
 
 #app {
